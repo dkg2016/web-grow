@@ -1,264 +1,267 @@
+import { Subject } from '../utils/subscribe.js'
+export const selectSeatSub = new Subject();
+
 export const placeData = [{
-    "svgObjId": "group1",
-    "roomName": "VIP 1",
-    "seats": [{
-        "svgObjId": "group1-seat1",
-        "seatNum": 1,
-      },
-      {
-        "svgObjId": "group1-seat2",
-        "seatNum": 2,
-      }
-    ],
-  },
-  {
-    "svgObjId": "group2",
-    "roomName": "VIP 2",
-    "seats": [{
-        "svgObjId": "group2-seat3",
-        "seatNum": 3,
-      },
-      {
-        "svgObjId": "group2-seat4",
-        "seatNum": 4,
-      }
-    ],
-  },
-  {
-    "svgObjId": "group3",
-    "roomName": "VIP 3",
-    "seats": [{
-        "svgObjId": "group3-seat5",
-        "seatNum": 5,
-      },
-      {
-        "svgObjId": "group3-seat6",
-        "seatNum": 6,
-      },
-      {
-        "svgObjId": "group3-seat7",
-        "seatNum": 7,
-      }
-    ],
-  },
-  {
-    "svgObjId": "group4",
-    "roomName": "VIP 4",
-    "seats": [{
-      "svgObjId": "group4-seat8",
-      "seatNum": 8,
-    }]
-  },
-  {
-    "svgObjId": "study2",
-    "roomName": "沉浸区-1",
-    "seats": [{
-        "svgObjId": "study2-seat17",
-        "seatNum": 17,
-      },
-      {
-        "svgObjId": "study2-seat18",
-        "seatNum": 18,
-      },
-      {
-        "svgObjId": "study2-seat19",
-        "seatNum": 19,
-      },
-      {
-        "svgObjId": "study2-seat20",
-        "seatNum": 20,
-      },
-      {
-        "svgObjId": "study2-seat21",
-        "seatNum": 21,
-      },
-      {
-        "svgObjId": "study2-seat22",
-        "seatNum": 22,
-      },
-      {
-        "svgObjId": "study2-seat23",
-        "seatNum": 23,
-      },
-      {
-        "svgObjId": "study2-seat24",
-        "seatNum": 24,
-      },
-      {
-        "svgObjId": "study2-seat25",
-        "seatNum": 25,
-      },
-      {
-        "svgObjId": "study2-seat26",
-        "seatNum": 26,
-      },
-      {
-        "svgObjId": "study2-seat27",
-        "seatNum": 27,
-      }
-    ]
-  },
-  {
-    "svgObjId": "study3",
-    "roomName": "沉浸区- 2",
-    "seats": [{
-        "svgObjId": "study3-seat28",
-        "seatNum": 28,
-      },
-      {
-        "svgObjId": "study3-seat29",
-        "seatNum": 29,
-      },
-      {
-        "svgObjId": "study3-seat30",
-        "seatNum": 30,
-      },
-      {
-        "svgObjId": "study3-seat31",
-        "seatNum": 31,
-      },
-      {
-        "svgObjId": "study3-seat32",
-        "seatNum": 32,
-      },
-      {
-        "svgObjId": "study3-seat33",
-        "seatNum": 33,
-      },
-      {
-        "svgObjId": "study3-seat34",
-        "seatNum": 34,
-      },
-      {
-        "svgObjId": "study3-seat35",
-        "seatNum": 35
-      },
-      {
-        "svgObjId": "study3-seat36",
-        "seatNum": 36,
-      },
-      {
-        "svgObjId": "study3-seat37",
-        "seatNum": 37,
-      }
-    ]
-  },
-  {
-    "svgObjId": "study4",
-    "roomName": "沉浸区- 3",
-    "seats": [{
-        "svgObjId": "study4-seat38",
-        "seatNum": 38,
-      },
-      {
-        "svgObjId": "study4-seat39",
-        "seatNum": 39,
-      },
-      {
-        "svgObjId": "study4-seat44",
-        "seatNum": 44,
-      },
-      {
-        "svgObjId": "study4-seat45",
-        "seatNum": 45,
-      },
-      {
-        "svgObjId": "study4-seat46",
-        "seatNum": 46,
-      }
-    ]
-  },
-  {
-    "svgObjId": "study6",
-    "roomName": "沉浸区- 4",
-    "seats": [{
-        "svgObjId": "study6-seat47",
-        "seatNum": 47,
-      },
-      {
-        "svgObjId": "study6-seat48",
-        "seatNum": 48,
-      },
-      {
-        "svgObjId": "study6-seat49",
-        "seatNum": 49,
-      },
-      {
-        "svgObjId": "study6-seat50",
-        "seatNum": 50,
-      },
-      {
-        "svgObjId": "study6-seat51",
-        "seatNum": 51,
-      },
-      {
-        "svgObjId": "study6-seat52",
-        "seatNum": 52,
-      },
-      {
-        "svgObjId": "study6-seat53",
-        "seatNum": 53,
-      }
-    ]
-  },
-  {
-    "svgObjId": "study1",
-    "roomName": "阳光区- 1",
-    "seats": [{
-        "svgObjId": "study1-seat9",
-        "seatNum": 9,
-      },
-      {
-        "svgObjId": "study1-seat10",
-        "seatNum": 10,
-      },
-      {
-        "svgObjId": "study1-seat11",
-        "seatNum": 11,
-      },
-      {
-        "svgObjId": "study1-seat12",
-        "seatNum": 12,
-      },
-      {
-        "svgObjId": "study1-seat13",
-        "seatNum": 13
-      },
-      {
-        "svgObjId": "study1-seat14",
-        "seatNum": 14,
-      },
-      {
-        "svgObjId": "study1-seat15",
-        "seatNum": 15,
-      },
-      {
-        "svgObjId": "study1-seat16",
-        "seatNum": 16,
-      }
-    ]
-  },
-  {
-    "svgObjId": "study5",
-    "roomName": "阳光区- 2",
-    "seats": [{
-        "svgObjId": "study5-seat40",
-        "seatNum": 40,
-      },
-      {
-        "svgObjId": "study5-seat41",
-        "seatNum": 41,
-      },
-      {
-        "svgObjId": "study5-seat42",
-        "seatNum": 42,
-      },
-      {
-        "svgObjId": "study5-seat43",
-        "seatNum": 43,
-      }
-    ]
-  }
+        "svgObjId": "group1",
+        "roomName": "VIP 1",
+        "seats": [{
+                "svgObjId": "group1-seat1",
+                "seatNum": 1,
+            },
+            {
+                "svgObjId": "group1-seat2",
+                "seatNum": 2,
+            }
+        ],
+    },
+    {
+        "svgObjId": "group2",
+        "roomName": "VIP 2",
+        "seats": [{
+                "svgObjId": "group2-seat3",
+                "seatNum": 3,
+            },
+            {
+                "svgObjId": "group2-seat4",
+                "seatNum": 4,
+            }
+        ],
+    },
+    {
+        "svgObjId": "group3",
+        "roomName": "VIP 3",
+        "seats": [{
+                "svgObjId": "group3-seat5",
+                "seatNum": 5,
+            },
+            {
+                "svgObjId": "group3-seat6",
+                "seatNum": 6,
+            },
+            {
+                "svgObjId": "group3-seat7",
+                "seatNum": 7,
+            }
+        ],
+    },
+    {
+        "svgObjId": "group4",
+        "roomName": "VIP 4",
+        "seats": [{
+            "svgObjId": "group4-seat8",
+            "seatNum": 8,
+        }]
+    },
+    {
+        "svgObjId": "study2",
+        "roomName": "沉浸区-1",
+        "seats": [{
+                "svgObjId": "study2-seat17",
+                "seatNum": 17,
+            },
+            {
+                "svgObjId": "study2-seat18",
+                "seatNum": 18,
+            },
+            {
+                "svgObjId": "study2-seat19",
+                "seatNum": 19,
+            },
+            {
+                "svgObjId": "study2-seat20",
+                "seatNum": 20,
+            },
+            {
+                "svgObjId": "study2-seat21",
+                "seatNum": 21,
+            },
+            {
+                "svgObjId": "study2-seat22",
+                "seatNum": 22,
+            },
+            {
+                "svgObjId": "study2-seat23",
+                "seatNum": 23,
+            },
+            {
+                "svgObjId": "study2-seat24",
+                "seatNum": 24,
+            },
+            {
+                "svgObjId": "study2-seat25",
+                "seatNum": 25,
+            },
+            {
+                "svgObjId": "study2-seat26",
+                "seatNum": 26,
+            },
+            {
+                "svgObjId": "study2-seat27",
+                "seatNum": 27,
+            }
+        ]
+    },
+    {
+        "svgObjId": "study3",
+        "roomName": "沉浸区- 2",
+        "seats": [{
+                "svgObjId": "study3-seat28",
+                "seatNum": 28,
+            },
+            {
+                "svgObjId": "study3-seat29",
+                "seatNum": 29,
+            },
+            {
+                "svgObjId": "study3-seat30",
+                "seatNum": 30,
+            },
+            {
+                "svgObjId": "study3-seat31",
+                "seatNum": 31,
+            },
+            {
+                "svgObjId": "study3-seat32",
+                "seatNum": 32,
+            },
+            {
+                "svgObjId": "study3-seat33",
+                "seatNum": 33,
+            },
+            {
+                "svgObjId": "study3-seat34",
+                "seatNum": 34,
+            },
+            {
+                "svgObjId": "study3-seat35",
+                "seatNum": 35
+            },
+            {
+                "svgObjId": "study3-seat36",
+                "seatNum": 36,
+            },
+            {
+                "svgObjId": "study3-seat37",
+                "seatNum": 37,
+            }
+        ]
+    },
+    {
+        "svgObjId": "study4",
+        "roomName": "沉浸区- 3",
+        "seats": [{
+                "svgObjId": "study4-seat38",
+                "seatNum": 38,
+            },
+            {
+                "svgObjId": "study4-seat39",
+                "seatNum": 39,
+            },
+            {
+                "svgObjId": "study4-seat44",
+                "seatNum": 44,
+            },
+            {
+                "svgObjId": "study4-seat45",
+                "seatNum": 45,
+            },
+            {
+                "svgObjId": "study4-seat46",
+                "seatNum": 46,
+            }
+        ]
+    },
+    {
+        "svgObjId": "study6",
+        "roomName": "沉浸区- 4",
+        "seats": [{
+                "svgObjId": "study6-seat47",
+                "seatNum": 47,
+            },
+            {
+                "svgObjId": "study6-seat48",
+                "seatNum": 48,
+            },
+            {
+                "svgObjId": "study6-seat49",
+                "seatNum": 49,
+            },
+            {
+                "svgObjId": "study6-seat50",
+                "seatNum": 50,
+            },
+            {
+                "svgObjId": "study6-seat51",
+                "seatNum": 51,
+            },
+            {
+                "svgObjId": "study6-seat52",
+                "seatNum": 52,
+            },
+            {
+                "svgObjId": "study6-seat53",
+                "seatNum": 53,
+            }
+        ]
+    },
+    {
+        "svgObjId": "study1",
+        "roomName": "阳光区- 1",
+        "seats": [{
+                "svgObjId": "study1-seat9",
+                "seatNum": 9,
+            },
+            {
+                "svgObjId": "study1-seat10",
+                "seatNum": 10,
+            },
+            {
+                "svgObjId": "study1-seat11",
+                "seatNum": 11,
+            },
+            {
+                "svgObjId": "study1-seat12",
+                "seatNum": 12,
+            },
+            {
+                "svgObjId": "study1-seat13",
+                "seatNum": 13
+            },
+            {
+                "svgObjId": "study1-seat14",
+                "seatNum": 14,
+            },
+            {
+                "svgObjId": "study1-seat15",
+                "seatNum": 15,
+            },
+            {
+                "svgObjId": "study1-seat16",
+                "seatNum": 16,
+            }
+        ]
+    },
+    {
+        "svgObjId": "study5",
+        "roomName": "阳光区- 2",
+        "seats": [{
+                "svgObjId": "study5-seat40",
+                "seatNum": 40,
+            },
+            {
+                "svgObjId": "study5-seat41",
+                "seatNum": 41,
+            },
+            {
+                "svgObjId": "study5-seat42",
+                "seatNum": 42,
+            },
+            {
+                "svgObjId": "study5-seat43",
+                "seatNum": 43,
+            }
+        ]
+    }
 ];
 
 export const svgText = `<?xml version="1.0" encoding="UTF-8"?>
@@ -1153,3 +1156,31 @@ export const svgText = `<?xml version="1.0" encoding="UTF-8"?>
         </g>
     </g>
 </svg>`;
+
+export const uiXMLText = `<defs>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="100%"     x2="50%" y2="0%" id="occupy-desk"><stop stop-color="#E4E4E4" offset="0%"></stop>
+  <stop stop-color="#D2D2D2" offset="100%"></stop>
+</linearGradient>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="0%" x2="50%" y2="100%" id="occupy-seat">
+  <stop stop-color="#E4E4E4" offset="0%"></stop>
+  <stop stop-color="#D2D2D2" offset="100%"></stop>
+</linearGradient>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="100%"       x2="50%" y2="0%" id="select-desk">
+  <stop stop-color="#3CA1FC" offset="0%"></stop>
+  <stop stop-color="#3C7CFC" offset="100%"></stop>
+</linearGradient>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="0%" x2="50%" y2="100%" id="select-seat">
+  <stop stop-color="#5DB3FF" offset="0%"></stop>
+  <stop stop-color="#3C6FFC" offset="100%"></stop>
+</linearGradient>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="100%"       x2="50%" y2="0%" id="default-desk">
+  <stop stop-color="#E5EDFF" offset="0%"></stop>
+  <stop stop-color="#E0E9FF" offset="100%"></stop>
+</linearGradient>
+<linearGradient xmlns="http://www.w3.org/2000/svg" x1="50%" y1="0%" x2="50%" y2="100%" id="default-seat">
+  <stop stop-color="#E5EDFF" offset="0%"></stop>
+  <stop stop-color="#D5E1FC" offset="100%"></stop>
+</linearGradient>
+<pattern id="disable-x" x="0" y="0" width="22" height="22" patternUnits="objectBoundingBox">
+  <path xmlns="http://www.w3.org/2000/svg" d="M39.3933983,15.3933983 C40.5649712,14.2218254 42.4644661,14.2218254 43.636039,15.3933983 L43.636039,15.3933983 L49.9997186,21.7567186 L56.363961,15.3933983 C57.5355339,14.2218254 59.4350288,14.2218254 60.6066017,15.3933983 C61.7781746,16.5649712 61.7781746,18.4644661 60.6066017,19.636039 L54.2417186,25.9997186 L60.6066017,32.363961 C61.7313117,33.488671 61.7763001,35.2842339 60.7415669,36.4626121 L60.6066017,36.6066017 C59.4350288,37.7781746 57.5355339,37.7781746 56.363961,36.6066017 L56.363961,36.6066017 L49.9997186,30.2417186 L43.636039,36.6066017 C42.4644661,37.7781746 40.5649712,37.7781746 39.3933983,36.6066017 C38.2218254,35.4350288 38.2218254,33.5355339 39.3933983,32.363961 L45.7567186,25.9997186 L39.3933983,19.636039 C38.2686883,18.511329 38.2236999,16.7157661 39.2584331,15.5373879 Z" id=""></path>
+</pattern></defs>`

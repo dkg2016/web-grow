@@ -68,16 +68,16 @@ html, body, .container {
   position: absolute;
   left: 30rem;
   right: 30rem;
-  bottom: 30rem;
-  height: 268rem;
+  top: 100%;
+  height: 229rem;
   padding: 30rem 40rem;
   background: #FFFFFF;
   box-shadow: 0 8rem 20rem 0 rgba(138,144,148,0.20);
   border-radius: 30rem;
+  transition: transform .1s linear;
 }
 
 .info-box .place-info {
-  margin-bottom: 8rem;
   height: 40rem;
   width: 400rem;
   overflow: hidden;
@@ -89,33 +89,8 @@ html, body, .container {
   font-family: PingFangSC-Semibold;
 }
 
-.info-box .address-wrap {
-  display: flex;
-  align-items: center;
-  font-size: 24rem;
-  color: #8A9094;
-}
-
-.info-box .icon-position {
-  margin-right: 4rem;
-  width: 32rem;
-  height: 32rem;
-}
-
-.info-box .seat-info {
-  position: absolute;
-  right: 40rem;
-  top: 30rem;
-  width: 132rem;
-  height: 80rem;
-  line-height: 80rem;
-  border: 1rem solid #DEE2EA;
-  border-radius: 20rem;
-  text-align: center;
-}
-
 .info-box .appoint-btn {
-  margin-top: 40rem;
+  margin-top: 30rem;
   height: 88rem;
   line-height: 88rem;
   text-align: center;
