@@ -1,3 +1,5 @@
+import { payBoxInstance } from '../main.js'
+
 class InfoBox {
   constructor() {
     this.hostView = document.getElementById('infoBox');
@@ -27,8 +29,8 @@ class InfoBox {
     `;
     this.hostView.innerHTML = html;
     document.getElementById('appointBtn').addEventListener('click', e => {
-      console.log('appoint click')
-    })
+      payBoxInstance.render().show();
+    });
     return this;
   }
 }

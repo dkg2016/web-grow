@@ -1,6 +1,8 @@
 import { Subject } from '../utils/subscribe.js'
 export const selectSeatSub = new Subject();
 
+export const overlaySub = new Subject();
+
 export const placeData = [{
         "svgObjId": "group1",
         "roomName": "VIP 1",

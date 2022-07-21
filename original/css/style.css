@@ -3,6 +3,7 @@ html, body, .container {
   background-color: #f9f9fb;
   font-family: PingFangSC-Regular;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* 顶部 label */
@@ -99,4 +100,75 @@ html, body, .container {
   font-size: 32rem;
   color: #FFFFFF;
   letter-spacing: 0;
+}
+
+.pay-box {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: 0;
+  height: 430rem;
+  padding: 30rem 40rem;
+  background: #FFFFFF;
+  box-shadow: 0 8rem 20rem 0 rgba(138,144,148,0.20);
+  border-top-left-radius: 30rem;
+  border-top-right-radius: 30rem;
+  transition: transform .3s linear;
+  z-index: 10;
+}
+
+.pay-box .pay-item {
+  height: 82rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rem;
+  border-bottom: solid #eee 1rem;
+}
+.pay-box .select-coupon {
+  height: 82rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rem;
+}
+
+.pay-item .text {
+  width: 200rem;
+}
+
+.pay-item .select-icon {
+  box-sizing: border-box;
+  width: 32rem;
+  height: 32rem;
+  border-radius: 50%;
+  border: solid #ccc 1rem;
+}
+
+.pay-item .select-icon.active {
+  background-color: #FF6D25;
+}
+
+.select-coupon .coupon-text {
+  color: #FF6D25;
+  font-size: 28rem;
+  font-weight: bold;
+}
+
+.pay-box .confirm-btn {
+  margin-top: 30rem;
+  height: 88rem;
+  line-height: 88rem;
+  text-align: center;
+  background: #ccc;
+  border-radius: 20rem;
+  font-size: 32rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.pay-box .confirm-btn.active {
+  background: #3C7CFC;
 }
