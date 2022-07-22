@@ -1,9 +1,10 @@
-import { overlay } from '../main.js'
+import { overlay, couponListInstance, toast,  } from '../main.js'
 
 class PayBox {
 
   constructor(wrapId) {
     this.hostView = document.getElementById(wrapId);
+    this.couponTextDom = null;
     this.canPay = false;
   }
 
@@ -26,11 +27,19 @@ class PayBox {
       </div>
       <div class="select-coupon">
         <div class="text">选择优惠券</div>
-        <div class="coupon-text">已减 3 > </div>
+        <div id="couponText" class="coupon-text">已减 3 > </div>
       </div>
       <div id="confirmBtn" class="confirm-btn">确认</div>
     `;
+
     this.hostView.innerHTML = html;
+    this.couponTextDom = this.hostView.querySelector('#couponText');
+
+    this.addListeners();
+    return this;
+  }
+
+  addListeners() {
     document.querySelectorAll('.select-icon').forEach(dom => {
       dom.addEventListener('click', e => {
         const payType = dom.getAttribute('pay-type');
@@ -58,13 +67,17 @@ class PayBox {
       if (!this.canPay) {
         return;
       }
-      console.log('confirm')
+      toast.create('预约成功');
+      overlay.hide();
+      this.hide();
     });
-    return this;
+
+    this.couponTextDom.addEventListener('click', e => {
+      couponListInstance.show();
+    });
   }
 
   show() {
-    console.log(overlay)
     overlay.show();
     this.hostView.style.transform = 'translateY(-430rem)';
     return this;
@@ -75,7 +88,9 @@ class PayBox {
     return this;
   }
 
-
+  updateCouponText(text) {
+    this.couponTextDom.innerText = text;
+  }
 }
 
 export default PayBox;

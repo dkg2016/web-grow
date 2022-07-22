@@ -29,7 +29,7 @@ class InfoBox {
     `;
     this.hostView.innerHTML = html;
     document.getElementById('appointBtn').addEventListener('click', e => {
-      payBoxInstance.render().show();
+      payBoxInstance.show();
     });
     return this;
   }
